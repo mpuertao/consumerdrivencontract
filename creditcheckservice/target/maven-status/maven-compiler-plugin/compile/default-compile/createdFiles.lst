@@ -1,0 +1,6 @@
+com\bankdigitalretail\creditcheckservice\CreditCheckController.class
+com\bankdigitalretail\creditcheckservice\CreditCheckResponse.class
+com\bankdigitalretail\creditcheckservice\CreditcheckserviceApplication.class
+com\bankdigitalretail\creditcheckservice\CreditCheckResponse$Score.class
+com\bankdigitalretail\creditcheckservice\CreditCheckRequest.class
+com\bankdigitalretail\creditcheckservice\CreditCheckService.class

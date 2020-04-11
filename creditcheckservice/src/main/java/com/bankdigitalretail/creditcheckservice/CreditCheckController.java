@@ -13,7 +13,7 @@ public class CreditCheckController {
         this.creditCheckService = creditCheckService;
     }
 
-    @PostMapping("credit-scores")
+    @PostMapping("/credit-scores")
     public CreditCheckResponse doCreditCheck(@RequestBody CreditCheckRequest creditCheckRequest) {
         return creditCheckService.doCreditCheck(creditCheckRequest.getCitizenNumber());
     }

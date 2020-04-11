@@ -12,8 +12,10 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import static com.bankretaildigital.creditcardservice.models.ApplyForCreditCardRequest.CardType.GOLD;
+import static com.bankretaildigital.creditcardservice.models.ApplyForCreditCardResponse.Status.DENIED;
 import static com.bankretaildigital.creditcardservice.models.ApplyForCreditCardResponse.Status.GRANTED;
 import static com.bankretaildigital.creditcardservice.models.CreditCheckResponse.Score.HIGH;
+import static com.bankretaildigital.creditcardservice.models.CreditCheckResponse.Score.LOW;
 
 @RestController
 public class CreditCardApplicationsController {
@@ -33,8 +35,13 @@ public class CreditCardApplicationsController {
                 .path("credit-scores")
                 .toUriString();
         final CreditCheckResponse creditCheckResponse = restTemplate.postForObject(uri, new CreditCheckRequest(citizenNumber), CreditCheckResponse.class);
-        if (creditCheckResponse.getScore() == HIGH && applyForCreditCardRequest.getCardType() == GOLD) {
-            return new ApplyForCreditCardResponse(GRANTED);
+
+        if (applyForCreditCardRequest.getCardType() == GOLD) {
+            if (creditCheckResponse.getScore() == HIGH) {
+                return new ApplyForCreditCardResponse(GRANTED);
+            } else if (creditCheckResponse.getScore() == LOW) {
+                return new ApplyForCreditCardResponse(DENIED);
+            }
         }
         throw new RuntimeException("Card  and score not yet implemented");
     }

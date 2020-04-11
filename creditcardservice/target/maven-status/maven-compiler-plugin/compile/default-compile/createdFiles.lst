@@ -1,0 +1,10 @@
+com\bankretaildigital\creditcardservice\CreditCheckService.class
+com\bankretaildigital\creditcardservice\models\CreditCheckRequest.class
+com\bankretaildigital\creditcardservice\CreditCardApplicationsController.class
+com\bankretaildigital\creditcardservice\models\ApplyForCreditCardRequest$CardType.class
+com\bankretaildigital\creditcardservice\models\ApplyForCreditCardResponse.class
+com\bankretaildigital\creditcardservice\models\ApplyForCreditCardResponse$Status.class
+com\bankretaildigital\creditcardservice\models\CreditCheckResponse$Score.class
+com\bankretaildigital\creditcardservice\CreditcardserviceApplication.class
+com\bankretaildigital\creditcardservice\models\ApplyForCreditCardRequest.class
+com\bankretaildigital\creditcardservice\models\CreditCheckResponse.class
