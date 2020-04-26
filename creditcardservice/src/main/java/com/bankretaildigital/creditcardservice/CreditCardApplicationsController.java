@@ -43,6 +43,6 @@ public class CreditCardApplicationsController {
                 return new ApplyForCreditCardResponse(DENIED);
             }
         }
-        throw new RuntimeException("Card  and score not yet implemented");
+        throw new RuntimeException("Card and score not yet implemented");
     }
 }
