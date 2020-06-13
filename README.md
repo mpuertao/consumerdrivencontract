@@ -16,7 +16,7 @@ ANTES DE SEGUIR, LES RECOMIENDO LEER LA TEORÍA.
 
 Primero se tiene un Microservicio llamado Creditcardservice ,  lo tomaremos como el Consumidor para ejemplificar un escenario de solicitud de tarjeta de crédito, donde este microservicio hará la aprobación o el rechazo de la solicitud dependiendo de la respuesta de otro Microservicio que será llamado CreditCheckService 
 
-El microservicio CreditCheckService hará el análisis y responderá si el punto del cliente es Alto o Bajo, es su única función, aparte de tener el contrato con el que validaremos el Contract Testing.
+El microservicio CreditCheckService hará el análisis y responderá si el puntaje del cliente es Alto o Bajo, es su única función, aparte de tener el contrato con el que validaremos el Contract Testing.
 
 
 Para construir los proyectos, primero debes compilar el proveedor (CreditCheckService) este contiene el contrato, comandos maven:
