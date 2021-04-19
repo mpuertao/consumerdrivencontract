@@ -18,7 +18,7 @@ public class CreditcardserviceTest extends BaseContractTest {
 		// given:
 			MockMvcRequestSpecification request = given()
 					.header("Content-Type", "application/json")
-					.body("{\"citizenNumber\":4444}");
+					.body("{\"citizenNumber\":4444,\"requestDate\":\"2020-04-26\",\"uuid\":\"aac0a33c-8822-11ea-bc55-0242ac130003\"}");
 
 		// when:
 			ResponseOptions response = given().spec(request)
@@ -30,6 +30,7 @@ public class CreditcardserviceTest extends BaseContractTest {
 		// and:
 			DocumentContext parsedJson = JsonPath.parse(response.getBody().asString());
 			assertThatJson(parsedJson).field("['score']").isEqualTo("LOW");
+			assertThatJson(parsedJson).field("['uuid']").isEqualTo("aac0a33c-8822-11ea-bc55-0242ac130003");
 	}
 
 	@Test
@@ -37,7 +38,7 @@ public class CreditcardserviceTest extends BaseContractTest {
 		// given:
 			MockMvcRequestSpecification request = given()
 					.header("Content-Type", "application/json")
-					.body("{\"citizenNumber\":1234}");
+					.body("{\"citizenNumber\":1234,\"requestDate\":\"2020-04-26\",\"uuid\":\"aac0a33c-8822-11ea-bc55-0242ac130003\"}");
 
 		// when:
 			ResponseOptions response = given().spec(request)
@@ -49,6 +50,7 @@ public class CreditcardserviceTest extends BaseContractTest {
 		// and:
 			DocumentContext parsedJson = JsonPath.parse(response.getBody().asString());
 			assertThatJson(parsedJson).field("['score']").isEqualTo("HIGH");
+			assertThatJson(parsedJson).field("['uuid']").isEqualTo("aac0a33c-8822-11ea-bc55-0242ac130003");
 	}
 
 }

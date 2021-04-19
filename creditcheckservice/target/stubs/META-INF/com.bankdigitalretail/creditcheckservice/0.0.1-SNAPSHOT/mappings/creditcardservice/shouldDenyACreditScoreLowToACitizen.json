@@ -1,5 +1,5 @@
 {
-  "id" : "cd7d7ef8-c867-4ffe-bd48-fddb1429400b",
+  "id" : "d3395718-68cb-4943-b22d-dac8a36e4e59",
   "request" : {
     "url" : "/credit-scores",
     "method" : "POST",
@@ -10,15 +10,19 @@
     },
     "bodyPatterns" : [ {
       "matchesJsonPath" : "$[?(@.['citizenNumber'] == 4444)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['requestDate'] =~ /(\\d\\d\\d\\d)-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])/)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['uuid'] =~ /[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}/)]"
     } ]
   },
   "response" : {
     "status" : 200,
-    "body" : "{\"score\":\"LOW\"}",
+    "body" : "{\"score\":\"LOW\",\"uuid\":\"{{{jsonpath this '$.uuid'}}}\"}",
     "headers" : {
       "Content-Type" : "application/json"
     },
     "transformers" : [ "response-template" ]
   },
-  "uuid" : "cd7d7ef8-c867-4ffe-bd48-fddb1429400b"
+  "uuid" : "d3395718-68cb-4943-b22d-dac8a36e4e59"
 }

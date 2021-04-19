@@ -9,11 +9,12 @@ import org.springframework.cloud.contract.stubrunner.spring.AutoConfigureStubRun
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -33,13 +34,11 @@ public class CreditcardserviceApplicationTests {
                                 "\"citizenNumber\": 1234," +
                                 "\"cardType\": \"GOLD\"" +
                                 "}"))
-                        .andDo(print())
-                        .andExpect(status().isOk())
-                        .andExpect(content()
-                                .json("{" +
-                                        "\"status\":\"GRANTED\"" +
-                                        "}"))
-                        .andExpect(content().contentTypeCompatibleWith(APPLICATION_JSON));
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.status", is("GRANTED")))
+                .andExpect(jsonPath("$.uuid", is(notNullValue())))
+                .andExpect(content().contentTypeCompatibleWith(APPLICATION_JSON));
     }
 
     @Test
@@ -53,12 +52,8 @@ public class CreditcardserviceApplicationTests {
                                 "}"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content()
-                        .json("{" +
-                                "\"status\":\"DENIED\"" +
-                                "}"))
+                .andExpect(jsonPath("$.status", is("DENIED")))
+                .andExpect(jsonPath("$.uuid", is(notNullValue())))
                 .andExpect(content().contentTypeCompatibleWith(APPLICATION_JSON));
     }
-
-
 }

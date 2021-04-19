@@ -1,6 +1,9 @@
-package com.bankretaildigital.creditcardservice.models;
+package com.bankretaildigital.creditcardservice.controller;
 
 public class ApplyForCreditCardRequest {
+
+    private int citizenNumber;
+    private CardType cardType;
 
     public int getCitizenNumber() {
         return citizenNumber;
@@ -17,9 +20,6 @@ public class ApplyForCreditCardRequest {
     public void setCardType(CardType cardType) {
         this.cardType = cardType;
     }
-
-    private int citizenNumber;
-    private CardType cardType;
 
 
     public enum CardType {

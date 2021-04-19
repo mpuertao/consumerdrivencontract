@@ -2,7 +2,7 @@ package com.bankdigitalretail.creditcheckservice;
 
 public class CreditCheckRequest {
 
-    public int citizenNumber;
+    private int citizenNumber;
 
     public int getCitizenNumber() {
         return citizenNumber;

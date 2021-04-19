@@ -1,7 +1,8 @@
-C:\Proyectos Desarrollo\Spring\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\models\ApplyForCreditCardResponse.java
-C:\Proyectos Desarrollo\Spring\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\CreditcardserviceApplication.java
-C:\Proyectos Desarrollo\Spring\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\models\CreditCheckRequest.java
-C:\Proyectos Desarrollo\Spring\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\CreditCheckService.java
-C:\Proyectos Desarrollo\Spring\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\models\CreditCheckResponse.java
-C:\Proyectos Desarrollo\Spring\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\models\ApplyForCreditCardRequest.java
-C:\Proyectos Desarrollo\Spring\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\CreditCardApplicationsController.java
+C:\Proyectos Desarrollo\Spring\Spring-MVC\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\gateway\CreditCheckRequest.java
+C:\Proyectos Desarrollo\Spring\Spring-MVC\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\CreditcardserviceApplication.java
+C:\Proyectos Desarrollo\Spring\Spring-MVC\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\gateway\CreditCheckGateway.java
+C:\Proyectos Desarrollo\Spring\Spring-MVC\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\controller\ApplyForCreditCardRequest.java
+C:\Proyectos Desarrollo\Spring\Spring-MVC\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\gateway\CreditCheckResponse.java
+C:\Proyectos Desarrollo\Spring\Spring-MVC\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\controller\CreditCardApplicationsController.java
+C:\Proyectos Desarrollo\Spring\Spring-MVC\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\controller\ApplyForCreditCardResponse.java
+C:\Proyectos Desarrollo\Spring\Spring-MVC\SpringCloudContractGithub\consumerdrivencontract\creditcardservice\src\main\java\com\bankretaildigital\creditcardservice\service\CreditCheckService.java
